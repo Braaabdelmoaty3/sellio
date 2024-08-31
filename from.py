@@ -1,6 +1,6 @@
 from flask_wtf import flaskform
 from wtforms import stringform, PasswordField
-from wtforms.validators import data_required, email, equal_to, length
+from wtforms.validators import data_required, email, EqualTo, length
 
 
 class regestration():
@@ -13,6 +13,16 @@ class regestration():
                                  validators=[data_required()])
         confirm_password = PasswordField('comferm password',
                                  validators=[data_required(),EqualTo('password', message='Passwords must match')])
+
+
+class login():
+    def login():
+        email = email('email',
+                      validators=[data_required(), email()])
+        password = PasswordField('password',
+                                 validators=[data_required()])
+
+
 
 
 
