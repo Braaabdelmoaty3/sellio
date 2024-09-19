@@ -2,6 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import DataRequired, Email, EqualTo, Length
 
+""" create a regestraion and login form to page login and regestraion """
 
 class RegistrationForm(FlaskForm):
     username = StringField('Username',
@@ -20,15 +21,4 @@ class LoginForm(FlaskForm):
                              validators=[DataRequired()])
     remember = BooleanField('Remember Me')
     submit = SubmitField('Login')
-
-
-
-
-
-
-
-
-# log in form 
-# regestration form 
-
 

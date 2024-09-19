@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sellio - Home</title>
+    <title>Create Post</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
 </head>
 <body>
     <header>
-        <!-- make a navigation bar  -->
         <nav>
             <a href="/">Sellio</a>
             <div>
@@ -21,17 +20,16 @@
     </header>
 
     <main>
-        <h1>Welcome to Sellio</h1>
-        <p>Your one-stop shop for managing your online sales and marketplace presence.</p>
-        <button onclick="location.href='/posts'"> post </button>
-        <button> comment </button>
-        <button onclick="location.href='/create_post'">Add Post</button>
+        <h1>Create a Post</h1>
+        <form action="/create_post" method="POST">
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio" required></textarea>
+            <button type="submit">Submit Post</button>
+        </form>
     </main>
 
     <footer>
         <p>&copy; 2024 Sellio. All rights reserved.</p>
     </footer>
-
-    <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>
